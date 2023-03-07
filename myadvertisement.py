@@ -1,8 +1,8 @@
-import numpy as np
-import pandas as pd
 import streamlit as st
 from sklearn.linear_model import LinearRegression
-from pandas.io.clipboards import read_clipboard
+import numpy as np
+import pandas as pd
+
 st.write("""
 # Sales Prediction App
 
@@ -31,9 +31,8 @@ data = pd.read_csv('Advertising.csv')
 X = data[['TV', 'Radio', 'Newspaper']]
 y = data['Sales']
 
-model = LinearRegression
+model = LinearRegression()
 model.fit(X, y)
-
 
 prediction = model.predict(df)
 
