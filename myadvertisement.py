@@ -29,6 +29,8 @@ st.subheader('User Input parameters')
 st.write(df)
 
 data = pd.read_csv('Advertising.csv')
+data = data.drop('Unnamed: 0', axis=1)
+
 
 X = data[['TV', 'Radio', 'Newspaper']]
 y = data['Sales']
