@@ -8,7 +8,7 @@ from pandas.io.clipboards import read_clipboard
 st.write("""
 # Sales Prediction App
 
-This app predicts the **Sales** !
+This app predicts the **Sales** using Linear Regression !
 """)
 
 st.sidebar.header('User Input Parameters')
