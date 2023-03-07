@@ -6,7 +6,7 @@ import pandas as pd
 st.write("""
 # Sales Prediction App
 
-This app predicts the **Sales** !
+This app predicts the **Sales** using Linear Regression!
 """)
 
 st.sidebar.header('User Input Parameters')
@@ -36,5 +36,5 @@ model.fit(X, y)
 
 prediction = model.predict(df)
 
-st.subheader('Prediction')
+st.subheader('The sales prediction is')
 st.write(prediction)
