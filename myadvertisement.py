@@ -12,9 +12,9 @@ This app predicts the **Sales** !
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    TV = st.sidebar.slider('TV', 0.7, 296.4, 100)
-    Radio = st.sidebar.slider('Radio', 0.0, 49.6, 30)
-    Newspaper = st.sidebar.slider('Newspaper', 0.3, 114, 30.5)    
+    TV = st.sidebar.slider('TV', 10, 300, 150)
+    Radio = st.sidebar.slider('Radio', 0, 50, 25)
+    Newspaper = st.sidebar.slider('Newspaper', 0, 120, 50)    
     data = {'TV': TV,
             'Radio': Radio,
             'Newspaper': Newspaper}
