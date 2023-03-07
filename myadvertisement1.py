@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_erroe
+from sklearn.metrics import mean_squared_error
 from pandas.io.clipboards import read_clipboard
 
 st.write("""
