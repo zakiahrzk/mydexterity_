@@ -1,14 +1,15 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_erroe
 from pandas.io.clipboards import read_clipboard
 
 st.write("""
 # Sales Prediction App
 
-This app predicts the **Sales** !
+This app predicts the **Sales** using Random Forest Regressor!
 """)
 
 st.sidebar.header('User Input Parameters')
@@ -35,11 +36,14 @@ y = data['Sales']
 
 
 Xtrain, Xtest, ytrain, ytest = train_test_split (X,y,test_size = 0.25, random_state = 1) 
+rf = RandomForestRegressor()
+rf.fit(Xtrain, ytrain)
+accuracy = rf.score(Xtest, ytest)
 
-linear = LinearRegression()
-linear.fit(Xtrain, ytrain)
+prediction = rf.predict(df)
 
-prediction = linear.predict(df)
+st.subheader('Accuracy')
+st.write(accuracy)
 
 st.subheader('Prediction')
 st.write(prediction)
